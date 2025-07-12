@@ -13,7 +13,6 @@ tile_set = ExtResource("1_0xm2m")
 script = ExtResource("2_1bvp3")
 
 [node name="HighlightLayer" type="TileMapLayer" parent="."]
-tile_set = ExtResource("1_0xm2m")
 script = ExtResource("4_1bvp3")
 
 [node name="Unit" type="Sprite2D" parent="HighlightLayer"]
