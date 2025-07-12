@@ -3,7 +3,7 @@ class_name HighlightLayer
 extends TileMapLayer
 
 @onready var terrain_layer = get_parent().get_node("TerrainLayer")
-@onready var unit = $Unit
+@onready var unit = get_parent().get_node("Unit")
 
 # プレイヤーの移動力
 var MOVE_RANGE = 2

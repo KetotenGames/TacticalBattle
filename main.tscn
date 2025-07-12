@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=4 uid="uid://yrtcrshpnbdx"]
+[gd_scene load_steps=7 format=4 uid="uid://yrtcrshpnbdx"]
 
 [ext_resource type="TileSet" uid="uid://01ue0f8o7286" path="res://tile_set.tres" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://uprfgga1l2o0" path="res://scripts/TerrainLayer.gd" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://c4vohqwynnoba" path="res://sprites/Knight64.png" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://6nqnafhvpms5" path="res://scripts/HiighlightLayer.gd" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://cotcgxx2axpew" path="res://sprites/wizard64.png" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://cf23q2v16eec6" path="res://scripts/Enemy.gd" id="6_7mycd"]
 
 [node name="Main" type="Node2D"]
 
@@ -16,5 +18,9 @@ script = ExtResource("2_1bvp3")
 tile_set = ExtResource("1_0xm2m")
 script = ExtResource("4_1bvp3")
 
-[node name="Unit" type="Sprite2D" parent="HighlightLayer"]
+[node name="Unit" type="Sprite2D" parent="."]
 texture = ExtResource("2_h2yge")
+
+[node name="Enemy" type="Sprite2D" parent="."]
+texture = ExtResource("5_lquwl")
+script = ExtResource("6_7mycd")
