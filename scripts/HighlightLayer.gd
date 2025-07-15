@@ -3,7 +3,6 @@ class_name HighlightLayer
 extends TileMapLayer
 
 @onready var terrain_layer = get_parent().get_node("TerrainLayer")
-@onready var unit = get_parent().get_node("Unit")
 
 # プレイヤーの移動力
 var MOVE_RANGE = 2
@@ -11,25 +10,10 @@ var MOVE_RANGE = 2
 var highlighted_tiles: Array = []
 
 func _ready() -> void:
-	unit.position = map_to_local(Vector2i(1, 1))
-	show_move_range(get_unit_tile_pos(), MOVE_RANGE)
+	pass
 	
-func _unhandled_input(event) -> void:
-	if get_parent().turn != get_parent().Turn.PLAYER:
-		return
-		
-	if event is InputEventMouseButton and event.pressed:
-		var tile_pos = local_to_map(event.position)
-		if is_in_move_range(tile_pos):
-			#unit.position = map_to_local(tile_pos)
-			unit.move_to(tile_pos)
-			clear_move_range()
-			show_move_range(local_to_map(unit.position), MOVE_RANGE)
-			unit.try_attack_enemy()
-			get_parent().end_player_turn()  # プレイヤーターン終了
-	
-func get_unit_tile_pos() -> Vector2i:
-	return local_to_map(unit.position)
+func get_unit_tile_pos(chara: Character) -> Vector2i:
+	return local_to_map(chara.position)
 	
 func get_movable_tiles(center: Vector2i, move_range: int) -> Array:
 	var open = [center]
