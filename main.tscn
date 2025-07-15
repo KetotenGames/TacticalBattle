@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cfs1mf4n40fyh" path="res://scripts/Main.gd" id="1_272bh"]
 [ext_resource type="Script" uid="uid://uprfgga1l2o0" path="res://scripts/TerrainLayer.gd" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://c4vohqwynnoba" path="res://sprites/Knight64.png" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://6nqnafhvpms5" path="res://scripts/HiighlightLayer.gd" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://6nqnafhvpms5" path="res://scripts/HighlightLayer.gd" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://cotcgxx2axpew" path="res://sprites/wizard64.png" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://qyoojm2al1x5" path="res://scripts/Unit.gd" id="6_5vw27"]
 [ext_resource type="Script" uid="uid://cf23q2v16eec6" path="res://scripts/Enemy.gd" id="6_7mycd"]

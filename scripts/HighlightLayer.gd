@@ -21,7 +21,8 @@ func _unhandled_input(event) -> void:
 	if event is InputEventMouseButton and event.pressed:
 		var tile_pos = local_to_map(event.position)
 		if is_in_move_range(tile_pos):
-			unit.position = map_to_local(tile_pos)
+			#unit.position = map_to_local(tile_pos)
+			unit.move_to(tile_pos)
 			clear_move_range()
 			show_move_range(local_to_map(unit.position), MOVE_RANGE)
 			unit.try_attack_enemy()
