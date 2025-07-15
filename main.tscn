@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://yrtcrshpnbdx"]
+[gd_scene load_steps=9 format=4 uid="uid://yrtcrshpnbdx"]
 
 [ext_resource type="TileSet" uid="uid://01ue0f8o7286" path="res://tile_set.tres" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cfs1mf4n40fyh" path="res://scripts/Main.gd" id="1_272bh"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c4vohqwynnoba" path="res://sprites/Knight64.png" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://6nqnafhvpms5" path="res://scripts/HiighlightLayer.gd" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://cotcgxx2axpew" path="res://sprites/wizard64.png" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://qyoojm2al1x5" path="res://scripts/Unit.gd" id="6_5vw27"]
 [ext_resource type="Script" uid="uid://cf23q2v16eec6" path="res://scripts/Enemy.gd" id="6_7mycd"]
 
 [node name="Main" type="Node2D"]
@@ -22,6 +23,7 @@ script = ExtResource("4_1bvp3")
 
 [node name="Unit" type="Sprite2D" parent="."]
 texture = ExtResource("2_h2yge")
+script = ExtResource("6_5vw27")
 
 [node name="Enemy" type="Sprite2D" parent="."]
 texture = ExtResource("5_lquwl")

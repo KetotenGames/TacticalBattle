@@ -24,6 +24,7 @@ func _unhandled_input(event) -> void:
 			unit.position = map_to_local(tile_pos)
 			clear_move_range()
 			show_move_range(local_to_map(unit.position), MOVE_RANGE)
+			unit.try_attack_enemy()
 			get_parent().end_player_turn()  # プレイヤーターン終了
 	
 func get_unit_tile_pos() -> Vector2i:

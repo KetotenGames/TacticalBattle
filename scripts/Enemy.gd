@@ -3,15 +3,24 @@ class_name Enemy
 extends Sprite2D
 
 @onready var unit = self  # 敵自身
+@onready var main = get_parent()
 @onready var player = get_parent().get_node("Unit")
 
 func _ready() -> void:
 	position = get_parent().get_node("HighlightLayer").map_to_local(Vector2i(6, 2))
 
+
+	
+
 func take_action():
 	var hl = get_parent().get_node("HighlightLayer")
+	var player = get_parent().get_node("Unit")
 	var player_tile = hl.local_to_map(player.position)
 	var enemy_tile = hl.local_to_map(position)
+	
+	if main.can_attack(player_tile, enemy_tile):
+		print("Enemy attacks player!")
+		return
 
 	var diff = player_tile - enemy_tile
 	var move = Vector2i(
